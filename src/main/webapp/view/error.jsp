@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Error Page</title>
 </head>
-<body>
-welcome user
+<body background="color:red">
+<h3>An error has occured</h3>
 </body>
 </html>

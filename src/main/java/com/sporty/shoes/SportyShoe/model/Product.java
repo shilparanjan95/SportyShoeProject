@@ -1,5 +1,6 @@
 package com.sporty.shoes.SportyShoe.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,7 +20,8 @@ public class Product {
 	private double price;
 	private int quantity;
 	private String size;
-	
+	@Column(columnDefinition = "bit default 1")
+	private boolean isVisible;
 	public int getId() {
 		return id;
 	}
@@ -66,10 +68,18 @@ public class Product {
 		this.size = size;
 	}
 	
+	
+	public boolean isIsVisible() {
+		return isVisible;
+	}
+	public void setIsVisible(boolean isVisible) {
+		this.isVisible = isVisible;
+	}
+	
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", category=" + category + ", gender=" + gender + ", name=" + name + ", price="
-				+ price + ", quantity=" + quantity + ", size=" + size + "]";
+				+ price + ", quantity=" + quantity + ", size=" + size + ", isVisible=" + isVisible + "]";
 	}
 	public Product() {
 		

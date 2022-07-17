@@ -4,11 +4,10 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sporty.shoes.SportyShoe.model.Order;
+import com.sporty.shoes.SportyShoe.model.Purchase;
 import com.sporty.shoes.SportyShoe.model.User;
 
-public interface OrderRepo extends JpaRepository<Order, Integer> {
+public interface PurchaseRepo extends JpaRepository<Purchase, Integer> {
 
-	
-	public Order findByUserAndStatus(User user,String status);
+	public List<Purchase>    findAllByUserId(User u);
 }

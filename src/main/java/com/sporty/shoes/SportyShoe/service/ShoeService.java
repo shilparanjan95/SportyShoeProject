@@ -20,7 +20,11 @@ public interface ShoeService {
 	public Product saveProduct(Product product);
 	public void deleteProduct(int c);
 	public List<Product> getProductByCategory(int c);
-	public void addProductToCart(int pi, String size, int quantity, int uid);
-
-	
+	public Order addProductToCart(int pi, String size, int quantity, int uid);
+    public Product getProduct(int productid);
+	public Purchase makePurchase(int order);
+	public Order getAllOrdersForUser(int userId);
+	public List<Purchase> getOrders(int userId);
+	public List<Purchase> getAllPurchases();
+	public void removeProductFromCart(int oid, int pid);
 }

@@ -9,12 +9,17 @@
 <body>
 <div align="center">
 <form action="pwdUpdate" method="post">
-
-username<input type="text" name="name"> <br>
-password<input type="password" name="password"><br> 
-conirm password<input type="password" name="password1"><br> 
-
+<table border="2px">
+<tr>
+<td>Username</td><td><input type="text" name="name"> </td><tr>
+<tr><td>Password</td><td><input type="password" name="password"></td></tr>
+<tr><td>ConFirm Password</td><td><input type="password" name="password1"></td>
+</tr><tr>
+<td colspan="2">
 <input type="submit" value="Submit">
+</td>
+</tr>
+</table>
 </div>
 </form>
 </body>

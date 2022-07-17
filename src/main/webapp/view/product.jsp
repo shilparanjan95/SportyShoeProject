@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="java.util.*,com.sporty.shoes.SportyShoe.model.*" %>
+     <%@ include file="adminlinks.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +17,9 @@
 </form>
 
 <table border="1px">
+<%if(request.getAttribute("product")==null){ %>
+<tr><td colspan="4">No Product available in this category</td></tr>
+<%} %>
 <tr><th>Product ID</th>
 <th>Product Name</th>
 <th>Product Price</th>
@@ -33,8 +37,7 @@ for(Product  c: clit)
 <td><form action="/DeleteProduct/<%= c.getId() %>" method="post">
 <input type="submit" value="Delete">
 </form></td>
-<td><form action="/edit/prouct" method="post">
-<input type="hidden" name="p" value="<%= c.getId() %>">
+<td><form action="/edit/product/<%= c.getId() %>" method="post">
 <input type="submit" value="Edit">
 </form></td>
 
